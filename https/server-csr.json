@@ -7,7 +7,9 @@
         "keycloak.org",
         "*.keycloak.org",
         "as.keycloak-fapi.org",
-        "rs.keycloak-fapi.org"
+        "rs.keycloak-fapi.org",
+        "84-244-72-90.nip.io",
+        "*.nip.io"
     ],
     "key": {
         "algo": "rsa",

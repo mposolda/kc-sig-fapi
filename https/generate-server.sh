@@ -31,7 +31,9 @@ cat << EOS > server-csr.json
         "keycloak.org",
         "*.keycloak.org",
         "$KC_HOST",
-        "$RS_HOST"
+        "$RS_HOST",
+        "84-244-72-90.nip.io",
+        "*.nip.io"
     ],
     "key": {
         "algo": "rsa",

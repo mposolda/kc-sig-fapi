@@ -5,9 +5,11 @@ services:
       context: ./load-balancer
     ports:
      - "443:443"
+     - "543:543"
+     - "643:643"
     environment:
      - KEYCLOAK_FQDN=${KEYCLOAK_FQDN}
-     - RESOURCE_FQDN=${RESOURCE_FQDN}
+     # - RESOURCE_FQDN=${RESOURCE_FQDN}
      - CONFORMANCE_SUITE_FQDN=${CONFORMANCE_SUITE_FQDN}
     depends_on:
      - keycloak
@@ -17,7 +19,7 @@ services:
       default:
         aliases:
          - ${KEYCLOAK_FQDN}
-         - ${RESOURCE_FQDN}
+         # - ${RESOURCE_FQDN}
          - ${CONFORMANCE_SUITE_FQDN}
   keycloak:
     build:
