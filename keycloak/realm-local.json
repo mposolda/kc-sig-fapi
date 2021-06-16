@@ -1178,8 +1178,8 @@
     },
     "clientProfiles" : {
         "profiles" : [ {
-            "name" : "fapi-1-advanced-ID2",
-            "description" : "Client profile, which enforce clients to conform 'Financial-grade API Security Profile 1.0 - Part 2: Advanced' specification. It has some modifications to pass the FAPI testsuite, which is based on the ID2 specification draft",
+            "name" : "fapi-1-rw-ID2",
+            "description" : "Client profile, which enforce clients to conform 'Financial-grade API - Part 2: Read and Write API Security Profile' specification. It has some modifications in comparison to fapi-1-advanced profile and it exists to pass the older FAPI testsuite plan, which is based on the FAPI RW ID2 specification draft (fapi-rw-id2-test-plan)",
             "executors" : [ {
                 "executor" : "secure-session",
                 "configuration" : { }
@@ -1221,6 +1221,9 @@
                 "executor" : "consent-required",
                 "configuration" : { }
             }, {
+                "executor" : "full-scope-disabled",
+                "configuration" : { }
+            }, {
                 "executor" : "holder-of-key-enforcer",
                 "configuration" : {
                     "auto-configure" : true
@@ -1230,8 +1233,8 @@
     },
     "clientPolicies" : {
         "policies" : [ {
-            "name" : "fapi-1-0-advanced-final-policy",
-            "description" : "The policy for FAPI 1.0 advanced security profile Final version",
+            "name" : "fapi-1-0-policy",
+            "description" : "The policy for FAPI 1.0 security profile",
             "enabled" : true,
             "conditions" : [ {
                 "condition" : "client-roles",
@@ -1239,7 +1242,7 @@
                     "roles" : [ "sample-client-role" ]
                 }
             } ],
-            "profiles" : [ "fapi-1-advanced-ID2" ]
+            "profiles" : [ "fapi-1-rw-ID2" ]
         } ]
     },
     "roles" : {

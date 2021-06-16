@@ -122,6 +122,8 @@ To access to Keycloak and Resource server with FQDN, modify your `hosts` file in
 
 ### Run FAPI Conformance test plan manually
 
+TODO:mposolda : NOTE ABOUT CLEANUP SESSION AFTER "fapi1-advanced-final-user-rejects-authentication" (3rd test)
+
 1. Run this project with `AUTOMATE_TESTS=false` environment variable set
 2. Open https://conformance-suite.keycloak-fapi.org
 3. Click `Create a new test plan` button.
